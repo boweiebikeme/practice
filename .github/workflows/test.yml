@@ -21,12 +21,16 @@ jobs:
 
     steps:
       - uses: actions/checkout@v7
+        name: Checkout Code
       - uses: hashicorp/setup-terraform@v4
 
       - name: Terraform fmt
         id: fmt
         run: terraform fmt -check
         continue-on-error: true
+
+      - name: my-test
+        run: echo "Hello, World!"
 
       - name: Terraform Init
         id: init

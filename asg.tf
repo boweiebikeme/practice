@@ -53,7 +53,7 @@ resource "aws_autoscaling_group" "web_asg" {
   tag {
     key                 = "Name"
     value               = "asg-instance"
-    propagate_at_launch = true
+    propagate_at_launch   = true
   }
 }
 

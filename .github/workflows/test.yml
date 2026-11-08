@@ -26,8 +26,8 @@ jobs:
 
       - name: Terraform fmt
         id: fmt
-        run: terraform fmt -check
-        continue-on-error: true
+        run: terraform fmt
+        # continue-on-error: true
 
       - name: my-test
         run: echo "Hello, World!"

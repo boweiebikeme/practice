@@ -98,5 +98,6 @@ jobs:
 
       - name: Terraform Apply
         id: apply
-        run: terraform apply -auto-approve -no-color
+        # run: terraform apply -auto-approve -no-color
+        run: terraform destroy -auto-approve -no-color
       

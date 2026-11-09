@@ -91,7 +91,12 @@ jobs:
       - uses: actions/checkout@v7
       - uses: hashicorp/setup-terraform@v4
 
+      
+      - name: Terraform Init
+        id: init
+        run: terraform init -input=false
+
       - name: Terraform Apply
         id: apply
         run: terraform apply -auto-approve -no-color
-        continue-on-error: true
+      
